@@ -1,7 +1,7 @@
 import cv2 as cv 
 import numpy as np
 
-path = 'imagens/baboon.jpg'
+path = 'imagem/baboon.jpg'
 image = cv.imread(path)
 cv.imshow('Original', image)
 

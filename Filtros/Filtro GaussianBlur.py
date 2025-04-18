@@ -1,7 +1,7 @@
 import cv2 as cv 
 import numpy as np
 
-path = 'visao_computacional.png'
+path = 'imagem/visao_computacional.png'
 img = cv.imread(path)
 cv.imshow('Original',img)
 

@@ -7,8 +7,8 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-    
-# webcam mostra a imagem da  cinza 
+
+# webcam mostra o video cinza 
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     cv.imshow('Vídeo em Escala de Cinza', gray)
 

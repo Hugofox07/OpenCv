@@ -1,9 +1,9 @@
-import cv2 as cv
-import numpy as np
+import cv2 as cv 
+import numpy as np 
 
 # Carregar os classificadores Haar Cascade para rosto e olhos
-face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'cascade/haarcascade_frontalcatface.xml')
-eye_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'cascade/haarcascade_eye.xml')
+face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
+eye_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_eye.xml')
 
 # Inicializar a captura de vídeo (0 para webcam padrão)
 cap = cv.VideoCapture(0)
@@ -23,7 +23,7 @@ while True:
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
     # Detectar rostos no frame
-    faces = face_cascade.detectMultiScale(gray, scaleFactor= 1.18, minNeighbors= 5)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
 
     for (x, y, w, h) in faces:
         # Desenhar um retângulo ao redor do rosto

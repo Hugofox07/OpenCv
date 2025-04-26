@@ -28,7 +28,6 @@ while(True):
 			# Draw rectangle shape
 			cv.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
 
-
      # Displayed the frame
 	cv.imshow('frame',frame)
 

@@ -6,7 +6,7 @@ face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalf
 eye_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_eye.xml')
 
 # Ler a imagem (substitua pelo caminho da sua imagem ou use a webcam)
-path = 'imagem/elon.jpeg'
+path = 'Fotos/imagem3.jpg'
 image = cv.imread(path) 
 
 # Converter a imagem para escala de cinza

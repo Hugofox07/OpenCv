@@ -5,7 +5,7 @@ import numpy as np
 face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
 eye_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_eye.xml')
 
-# Ler a imagem (substitua pelo caminho da sua imagem ou use a webcam)
+# Ler a imagem (substitua pelo caminho da sua imagem)
 path = 'Fotos/imagem3.jpg'
 image = cv.imread(path) 
 

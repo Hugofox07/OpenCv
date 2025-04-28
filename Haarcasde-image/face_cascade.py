@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 
 # Cor do retangulo do rosto 
-red = (0, 0, 255)
+Red = (0, 0, 255)
 
 # Carregar os classificadores HaarCascade para rosto
 carregaAlgoritimo = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')

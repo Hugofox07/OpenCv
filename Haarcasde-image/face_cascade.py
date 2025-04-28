@@ -11,6 +11,7 @@ carregaAlgoritimo = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_fro
 path = 'Fotos/imagem1.jpg'
 img = cv.imread(path)
 
+# gray imagem 
 img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 faces = carregaAlgoritimo.detectMultiScale(img_gray)

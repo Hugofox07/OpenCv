@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 
+# Cor do retangulo do rosto 
 red = (0, 0, 255)
 
 # Carregar os classificadores HaarCascade para rosto

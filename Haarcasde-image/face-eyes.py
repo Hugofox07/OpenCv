@@ -6,14 +6,15 @@ face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalf
 eye_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_eye.xml')
 
 # Ler a imagem (substitua pelo caminho da sua imagem)
-path = 'Fotos/imagem3.jpg'
+path = 'Fotos/imagem7.jpg'
 image = cv.imread(path) 
 
 # Converter a imagem para escala de cinza
 gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)  
 
 # Detectar rostos
-faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
+faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=4, minSize=(35,35))
+
 for (x, y, w, h) in faces:
 # Desenhar um retângulo aoredor do rosto
     cv.rectangle(image, (x, y), (x + w, y + h), (255, 0, 0), 2)

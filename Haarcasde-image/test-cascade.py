@@ -18,6 +18,6 @@ for(ox, oy, ol, oa) in eyes:
     cv.rectangle(roi_color,(ox, oy), (ox + ol, oy +oa), ( 255, 0, 255), 2)
         
 # Mostrar a imagem com detecções
-cv.imshow('Detecte face and eyes', image)
+cv.imshow('face and eyes Detection', image)
 cv.waitKey(0)
 cv.destroyAllWindows()

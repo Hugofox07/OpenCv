@@ -2,19 +2,19 @@ import cv2 as cv
 import numpy as np
 
 # Cor do retangulo do rosto 
-Red = (0, 0, 255)
+red = (0, 0, 255)
 
 # Carregar os classificadores HaarCascade para rosto
 carregaAlgoritimo = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 # Carregando a imagem
-path = 'Fotos/imagem1.jpg'
+path = 'Fotos/imagem3.jpg'
 img = cv.imread(path)
 
 # gray imagem 
 img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
-faces = carregaAlgoritimo.detectMultiScale(img_gray)
+faces = carregaAlgoritimo.detectMultiScale(img_gray, scaleFactor=1.08, minNeighbors=4, minSize=(35,35))
 print(faces)
 
 for (x, y, l, a) in faces:
